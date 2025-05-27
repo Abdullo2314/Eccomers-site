@@ -1,1 +1,193 @@
-@import "tailwindcss";
+body {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.headers_line {
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid #EFEFEF;
+}
+
+.wrapper_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.wrapper_nav {
+    display: flex;
+    gap: 32px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    align-items: center;
+    list-style: none;
+    text-decoration: none;
+}
+
+.wrapper_nav a {
+    font-size: 16px;
+    color: #000;
+    text-decoration: none;
+}
+
+.wrapper_logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.wrapper_logo h4 {
+    font-family: "Rubik Glitch", system-ui;
+    font-weight: 400;
+    color: #000;
+    font-size: 25px;
+}
+
+.wrapper_logo img {
+    width: 45px;
+    height: 45px;
+}
+
+.header_input {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.wrapper_header input {
+    border-radius: 5px;
+    padding: 10px 70px 10px 20px;
+    border: none;
+    background-color: #F5F5F5;
+}
+
+.wrapper_user {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.registration_modal {
+    border: none;
+    background: none;
+}
+
+.Search {
+    left: 85%;
+    position: absolute;
+}
+
+.header_favorites,
+.header_corzin {
+    color: #000;
+}
+
+.header_menu {
+    display: none;
+}
+
+.registration_out {
+    border: none;
+    padding: 5px 20px;
+    background: #EFEFEF;
+    border-radius: 5px;
+}
+
+.registration_out:active {
+    color: #FFF;
+}
+
+.registration_out:hover {
+    background: red;
+}
+
+.main_nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 30px 0;
+}
+
+
+
+.main_info {
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+
+    list-style: none;
+    display: flex;
+    height: 344px;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.main_info a {
+    color: #000;
+    text-decoration: none;
+}
+
+.headline {
+    padding: 50px 64px;
+}
+
+.headline h3 {
+    font-weight: 600;
+    line-height: 60px;
+    letter-spacing: 4%;
+    width: 280px;
+    margin: 5px 0;
+    font-size: 48px;
+}
+
+.main_logo {
+    display: flex;
+    flex-direction: column;
+}
+
+.bg_black {
+    color: #FFF;
+    height: 344px;
+    display: flex;
+    flex-direction: row;
+    background-color: #000;
+}
+
+
+.apple {
+    display: flex;
+    gap: 10px;
+}
+
+.main_button a {
+    color: #FFF;
+    border-bottom: 1px solid #FFF;
+    text-decoration: none;
+    padding-bottom: 5px;
+}
+
+.main_button {
+    font-weight: bold;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #FFF;
+    align-self: start;
+}
+
+.nav_border div {
+    width: 25px;
+    margin-right: 10px;
+    border-radius: 4px;
+    background-color: #DB4444;
+}
+
+.nav_border {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    display: flex;
+    color: #DB4444;
+}

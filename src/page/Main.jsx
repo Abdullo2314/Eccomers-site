@@ -32,9 +32,13 @@ function Main() {
     const prev = () => setCurrent((prev) => (prev - 1 + features.length) % features.length);
 
     return (
-        <div className="max-w-[375px] sm:max-w-[640px] md:max-w-[768px] md:mx-4 lg:mx-4 xl:mx-auto lg:max-w-[1140px] mx-auto">
-      <div className="flex flex-row bg-[#EEF1F8] m-auto relative rounded-[20px] overflow-hidden justify-center mt-4">
-        <h2 className="absolute text-white text-2xl sm:text-7xl w-4 md:w-[400px] left-[20px] sm:left-[150px] top-[120px] flex">
+        <div>
+          <div className='nav_border'>
+            <div></div>
+            <p>Today’s</p>
+          </div>
+      <div>
+        <h2>
           Самые лучшие Мандарины
         </h2>
         <img src="./OIP.jpg" className="sm:w-full sm:h-[600px]" alt="" />

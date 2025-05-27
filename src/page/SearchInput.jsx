@@ -57,19 +57,16 @@ function SearchInput() {
     };
 
     return (
-        <div className="relative hidden md:flex md:items-center md:w-full md:max-w-[292px]">
-            <div className="relative flex-grow">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500 w-5 h-5" />
-
+        <div>
+            <div className='header_input'>
                 <input
                     type="text"
-                    placeholder="Поиск товаров..."
+                    placeholder="What are you looking for?"
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
                     onKeyDown={handleKeyDown}
-                    className="lg:w-full md:pl-10 lg:pr-[70px] md:py-2 border rounded shadow-sm text-sm outline-none"
                 />
-
+                <Search className='Search' />
                 {query && (
                     <button
                         onClick={clearSearch}
@@ -79,13 +76,6 @@ function SearchInput() {
                         <X size={18} />
                     </button>
                 )}
-
-                <button
-                    onClick={handleSearchClick}
-                    className="absolute right-2 top-1/2 transform hidden lg:block -translate-y-1/2 w-[66px] h-[27px] bg-blue-500 hover:bg-blue-600 text-white text-sm rounded shadow"
-                >
-                    Поиск
-                </button>
             </div>
 
             {(results.length > 0 || notFound) && (

@@ -82,56 +82,54 @@ function RegistrationModal() {
     return (
         <div>
             {loggedInUser ? (
-                <div className="flex items-center gap-2">
-                    <span className="text-sm">Привет, {loggedInUser.name}!</span>
+                <div>
+                    <span>Привет, {loggedInUser.name}!</span>
                     <button
                         onClick={handleLogout}
-                        className="bg-red-500 text-white px-3 py-1 rounded text-sm"
+                        className='registration_out'
                     >
                         Выйти
                     </button>
                 </div>
             ) : (
-                <button onClick={toggleModal}>
-                    <User className="bg-blue-500 w-[37px] h-[40px] stroke-white p-2 rounded" />
+                <button className='registration_modal' onClick={toggleModal}>
+                    <User />
                 </button>
             )}
 
             {isOpen && (
-                <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-                    <div className="bg-white p-6 rounded-lg shadow-lg w-[90%] max-w-md relative">
-                        <button onClick={toggleModal} className="absolute top-2 right-2">
-                            <X className="w-5 h-5 text-gray-500 hover:text-black" />
+                <div>
+                    <div>
+                        <button onClick={toggleModal}>
+                            <X/>
                         </button>
 
-                        <h2 className="text-2xl font-bold mb-4 text-center">
+                        <h2>
                             {isLoginMode ? "Вход" : "Регистрация"}
                         </h2>
 
-                        {error && <p className="text-red-600 text-sm mb-2">{error}</p>}
+                        {error && <p>{error}</p>}
 
-                        <form onSubmit={handleSubmit} className="space-y-4">
+                        <form onSubmit={handleSubmit}>
                             {!isLoginMode && (
                                 <div>
-                                    <label className="block mb-1">Имя</label>
+                                    <label>Имя</label>
                                     <input
                                         type="text"
                                         name="name"
                                         value={formData.name}
                                         onChange={handleChange}
-                                        className="w-full border p-2 rounded"
                                     />
                                 </div>
                             )}
 
                             <div>
-                                    <label className="block mb-1">Email</label>
+                                    <label>Email</label>
                                 <input
                                     type="email"
                                     name="email"
                                     value={formData.email}
                                     onChange={handleChange}
-                                    className="w-full border p-2 rounded"
                                 />
                             </div>
 
@@ -142,13 +140,12 @@ function RegistrationModal() {
                                     name="password"
                                     value={formData.password}
                                     onChange={handleChange}
-                                    className="w-full border p-2 rounded"
                                 />
                             </div>
 
                             {!isLoginMode && (
                                 <div>
-                                    <label className="block mb-1">Подтверждение пароля</label>
+                                    <label>Подтверждение пароля</label>
                                     <input
                                         type="password"
                                         name="confirmPassword"
@@ -161,20 +158,18 @@ function RegistrationModal() {
 
                             <button
                                 type="submit"
-                                className="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600 transition"
                             >
                                 {isLoginMode ? "Войти" : "Зарегистрироваться"}
                             </button>
                         </form>
 
-                        <div className="text-center mt-4 text-sm">
+                        <div>
                             {isLoginMode ? "Нет аккаунта?" : "Уже есть аккаунт?"}{" "}
                             <button
                                 onClick={() => {
                                     setIsLoginMode(!isLoginMode);
                                     setError("");
                                 }}
-                                className="text-blue-500 underline"
                             >
                                 {isLoginMode ? "Зарегистрироваться" : "Войти"}
                             </button>
